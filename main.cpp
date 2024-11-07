@@ -50,7 +50,7 @@ public:
         if (mosquitto_connect(mosq, SERVER_ADDRESS, SERVER_PORT, 60) != 0) {
             std::cerr << "Failed to connect to MQTT broker" << std::endl;
             std::cerr << "Start the Mosquitto/MQTT broker and restart the process" << std::endl;
-            //exit(1);
+            exit(1);
         }
 
         // Set up the callback for receiving messages
